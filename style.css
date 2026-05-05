@@ -1,0 +1,318 @@
+:root {
+    --primary: rgb(240, 197, 6);
+    --accent: rgb(243, 168, 7);
+    --dark: black;
+    --light: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+.logo a:hover {
+    color: var(--primary);
+}
+
+.heading ul {
+    display: flex;
+}
+
+.heading ul li {
+    list-style: none;
+}
+
+.heading ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 14px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.heading ul li a:hover {
+    color: var(--primary);
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+#input {
+    width: 250px;
+    height: 32px;
+    border: none;
+    padding: 5px;
+}
+
+ion-icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.heading1 {
+    opacity: 0;
+}
+
+.menu {
+    visibility: hidden;
+}
+
+/* HERO SLIDER */
+.img-slider img {
+    width: 1080px;
+    height: 720px;
+}
+
+@keyframes slide {
+    0% {
+        left: 0px;
+    }
+
+    15% {
+        left: 0px;
+    }
+
+    20% {
+        left: -1080px;
+    }
+
+    32% {
+        left: -1080px;
+    }
+
+    35% {
+        left: -2160px;
+    }
+
+    47% {
+        left: -2160px;
+    }
+
+    50% {
+        left: -3240px;
+    }
+
+    63% {
+        left: -3240px;
+    }
+
+    66% {
+        left: -4320px;
+    }
+
+    79% {
+        left: -4320px;
+    }
+
+    82% {
+        left: -5400px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.img-slider {
+    display: flex;
+    position: relative;
+    width: 1080px;
+    height: 720px;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+}
+
+.section1 {
+    width: 1080px;
+    overflow: hidden;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    margin: 10px auto;
+}
+
+.section2 .container .items {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    background-color: white;
+    border: 2.5px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.section2 .container .items .name {
+    text-align: center;
+    background-color: var(--primary);
+    color: white;
+    height: 25px;
+    padding-top: 4px;
+}
+
+.section2 .container .items .price {
+    color: red;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.section2 .container .items .info {
+    padding-left: 10px;
+    color: var(--accent);
+}
+
+.section2 .container .items .img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    transition-duration: 0.8s;
+}
+
+.section2 .container .items .img {
+    overflow: hidden;
+}
+
+.section2 .container .items:hover .img img {
+    transform: scale(1.2);
+    transition-duration: 0.8s;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1250px) {
+
+    .heading ul li {
+        display: none;
+    }
+
+    .heading1 {
+        opacity: 1;
+    }
+
+    .heading1 .ham {
+        background-color: black;
+        color: white;
+    }
+
+    header {
+        height: 120px;
+    }
+
+    #input {
+        width: 200px;
+    }
+
+    .img-slider img {
+        width: 80vw;
+        height: 60vw;
+    }
+
+    @keyframes slide1 {
+        0% {
+            left: 0vw;
+        }
+
+        15% {
+            left: 0vw;
+        }
+
+        20% {
+            left: -80vw;
+        }
+
+        32% {
+            left: -80vw;
+        }
+
+        35% {
+            left: -160vw;
+        }
+
+        47% {
+            left: -160vw;
+        }
+
+        50% {
+            left: -240vw;
+        }
+
+        63% {
+            left: -240vw;
+        }
+
+        66% {
+            left: -320vw;
+        }
+
+        79% {
+            left: -320vw;
+        }
+
+        82% {
+            left: -400vw;
+        }
+
+        100% {
+            left: 0vw;
+        }
+    }
+
+    .img-slider {
+        width: 80%;
+        height: 60%;
+        animation-name: slide1;
+    }
+
+    .section1 {
+        width: 80%;
+    }
+
+    .items {
+        transform: scale(0.9);
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    header {
+        height: 220px;
+
+        flex-direction: column;
+    }
+
+    #input {
+        width: 150px;
+    }
+}
