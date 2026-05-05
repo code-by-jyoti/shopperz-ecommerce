@@ -80,6 +80,82 @@ ion-icon {
     visibility: hidden;
 }
 
+/* HERO SLIDER */
+.img-slider img {
+    width: 1080px;
+    height: 720px;
+}
+
+@keyframes slide {
+    0% {
+        left: 0px;
+    }
+
+    15% {
+        left: 0px;
+    }
+
+    20% {
+        left: -1080px;
+    }
+
+    32% {
+        left: -1080px;
+    }
+
+    35% {
+        left: -2160px;
+    }
+
+    47% {
+        left: -2160px;
+    }
+
+    50% {
+        left: -3240px;
+    }
+
+    63% {
+        left: -3240px;
+    }
+
+    66% {
+        left: -4320px;
+    }
+
+    79% {
+        left: -4320px;
+    }
+
+    82% {
+        left: -5400px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+.img-slider {
+    display: flex;
+    position: relative;
+    width: 1080px;
+    height: 720px;
+    animation-name: slide;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 2s;
+}
+
+.section1 {
+    width: 1080px;
+    overflow: hidden;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* RESPONSIVE */
 @media screen and (max-width: 1250px) {
 
@@ -102,6 +178,71 @@ ion-icon {
 
     #input {
         width: 200px;
+    }
+
+    .img-slider img {
+        width: 80vw;
+        height: 60vw;
+    }
+
+    @keyframes slide1 {
+        0% {
+            left: 0vw;
+        }
+
+        15% {
+            left: 0vw;
+        }
+
+        20% {
+            left: -80vw;
+        }
+
+        32% {
+            left: -80vw;
+        }
+
+        35% {
+            left: -160vw;
+        }
+
+        47% {
+            left: -160vw;
+        }
+
+        50% {
+            left: -240vw;
+        }
+
+        63% {
+            left: -240vw;
+        }
+
+        66% {
+            left: -320vw;
+        }
+
+        79% {
+            left: -320vw;
+        }
+
+        82% {
+            left: -400vw;
+        }
+
+        100% {
+            left: 0vw;
+        }
+    }
+
+    .img-slider {
+        width: 80%;
+        height: 60%;
+        animation-name: slide1;
+    }
+
+    .section1 {
+        width: 80%;
     }
 }
 
