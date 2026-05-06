@@ -80,6 +80,10 @@ ion-icon {
     visibility: hidden;
 }
 
+.menu.show {
+    visibility: visible;
+}
+
 /* HERO SLIDER */
 .img-slider img {
     width: 1080px;
@@ -293,6 +297,56 @@ ion-icon {
         width: 80%;
         height: 60%;
         animation-name: slide1;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu ul li {
+        list-style: none;
+        margin: 20px;
+        width: 80%;
+        text-align: center;
+        border-top: 3px solid white;
+        padding-top: 10px;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: white;
+        font-weight: 700;
+    }
+
+    .menu ul li a:hover {
+        color: var(--primary);
+    }
+
+    .close {
+        z-index: 20;
+        color: white;
+        background-color: black;
+    }
+
+    .ham,
+    .close {
+        cursor: pointer;
     }
 
     .section1 {
