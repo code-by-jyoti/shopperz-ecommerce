@@ -3,6 +3,7 @@
     --accent: rgb(243, 168, 7);
     --dark: black;
     --light: white;
+    --danger: red;
 }
 
 * {
@@ -11,9 +12,17 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 header {
     width: 100%;
-    height: 70px;
+    min-height: 70px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -30,6 +39,50 @@ header {
 
 .logo a:hover {
     color: var(--primary);
+    transition: 1s;
+}
+
+.menu {
+    visibility: hidden;
+}
+
+.menu.show {
+    visibility: visible;
+}
+
+ion-icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+ion-icon:hover {
+    cursor: pointer;
+}
+
+header a ion-icon {
+    position: relative;
+    right: 3px;
+}
+
+.search {
+    display: flex;
+    position: relative;
+}
+
+.search a {
+    display: flex;
+}
+
+#input {
+    width: 250px;
+    height: 32px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .heading ul {
@@ -41,43 +94,45 @@ header {
 }
 
 .heading ul li a {
+    margin: 5px;
     text-decoration: none;
+    font-weight: 500;
+    position: relative;
     color: white;
-    margin: 0 14px;
+    margin: 2px 14px;
     font-size: 18px;
     transition: 0.5s;
+    cursor: pointer;
+}
+
+.heading ul li a:active {
+    color: red;
 }
 
 .heading ul li a:hover {
     color: var(--primary);
-}
-
-.search {
-    display: flex;
-    align-items: center;
-}
-
-#input {
-    width: 250px;
-    height: 32px;
-    border: none;
-    padding: 5px;
-}
-
-ion-icon {
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    color: black;
-    cursor: pointer;
+    transition: 1s;
 }
 
 .heading1 {
     opacity: 0;
 }
 
-.menu {
-    visibility: hidden;
+.heading ul li a::before {
+    content: '';
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--accent);
+    transition: 1s;
+}
+
+.heading ul li a:hover::before {
+    width: 100%;
+    transition: 0.8s;
+    background-color: rgb(243, 168, 7);
 }
 
 .menu.show {
@@ -177,6 +232,12 @@ ion-icon {
     border: 2.5px solid black;
     border-radius: 12px;
     overflow: hidden;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.section2 .container .items:hover {
+    transform: translateY(-5px);
 }
 
 .section2 .container .items .name {
@@ -185,12 +246,16 @@ ion-icon {
     color: white;
     height: 25px;
     padding-top: 4px;
+    margin: 0;
 }
 
 .section2 .container .items .price {
-    color: red;
+    color: var(--danger);
     font-weight: 700;
     padding-left: 10px;
+    float: left;
+    display: block;
+    width: 100%;
 }
 
 .section2 .container .items .info {
@@ -201,17 +266,109 @@ ion-icon {
 .section2 .container .items .img img {
     width: 200px;
     height: 200px;
+    margin: 0;
+    padding: 0;
     border-radius: 12px;
-    transition-duration: 0.8s;
+    transition: 0.8s;
 }
 
 .section2 .container .items .img {
     overflow: hidden;
+    margin: 0;
 }
 
 .section2 .container .items:hover .img img {
     transform: scale(1.2);
-    transition-duration: 0.8s;
+    transition: 0.8s;
+    border-radius: 12px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    color: white;
+}
+
+.footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 15px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.social-media a {
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.social-media a ion-icon {
+    color: white;
+    background-color: black;
+}
+
+.social-media a:hover ion-icon {
+    color: var(--danger);
+    transform: translateY(5px);
+}
+
+.footer2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+.footer0 {
+    font-weight: 900;
+    transition-duration: 1s;
+}
+
+.footer0:hover {
+    color: var(--accent);
+}
+
+.footer2 .heading {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.footer3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer2 .heading:hover {
+    color: rgb(243, 168, 7);
+}
+
+.footer2 .div:hover {
+    transform: scale(1.05);
+}
+
+.footer3 h4 {
+    margin: 0 10px;
+}
+
+.footer2 div {
+    margin: 10px;
 }
 
 /* RESPONSIVE */
@@ -332,6 +489,7 @@ ion-icon {
         padding-top: 10px;
         color: white;
         font-weight: 900;
+        cursor: pointer;
     }
 
     .menu ul li a:hover {
@@ -395,7 +553,7 @@ ion-icon {
     }
 
     header {
-        height: 250px;
+        height: 220px;
         flex-wrap: wrap;
         display: flex;
         flex-direction: column;

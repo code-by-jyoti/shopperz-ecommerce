@@ -30,7 +30,7 @@ const items = document.querySelectorAll(".items");
 
 const noProduct = document.getElementById("noProduct");
 
-searchInput.addEventListener("keyup", () => {
+searchInput.addEventListener("input", () => {
     const value = searchInput.value.toLowerCase();
     let found = false;
 
@@ -43,7 +43,7 @@ searchInput.addEventListener("keyup", () => {
         const name = item.querySelector(".name").textContent.toLowerCase();
 
         if (name.includes(value)) {
-            item.style.display = "block";
+            item.style.display = "";
             found = true;
         }
         else {

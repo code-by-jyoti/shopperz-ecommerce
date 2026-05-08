@@ -22,6 +22,11 @@ The project focuses on clean UI, responsive navigation, and interactive product 
 - CONTACT US → Footer section
 - ABOUT US → Brand/About section
 
+<<<<<<< HEAD
+=======
+Navigation uses anchor-based scrolling without changing existing class or id structures.
+
+>>>>>>> dev
 ## Live Product Search
 - Real-time product filtering while typing
 - Automatically scrolls to products section
@@ -39,6 +44,7 @@ The project focuses on clean UI, responsive navigation, and interactive product 
 ---
 
 # Tech Stack
+<<<<<<< HEAD
 - HTML5
 - CSS3
 - Vanilla JavaScript
@@ -71,6 +77,39 @@ Shopperz-ecommerce/
 - Responsive improvements
 - Better mobile UX
 
+=======
+- HTML5 - Structure
+- CSS3 - Styling, responsiveness, variables
+- Vanilla JavaScript - Ineracticity
+- Ionicons
+
+---
+
+# Project Structure
+
+Shopperz-ecommerce/
+│
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+
+---
+
+# How It Works
+
+## Search Logic
+- JavaScript listens to keyboard input
+- Filters products by name
+- Scrolls to products section using scrollIntoView()
+- Handles empty state with a “No product found” message
+
+## Menu Logic
+- Mobile menu toggled using class manipulation
+- Links scroll smoothly to page sections
+- Menu closes automatically after navigation
+
+>>>>>>> dev
 ---
 
 # Key Learning Outcomes
@@ -80,6 +119,10 @@ Shopperz-ecommerce/
 - CSS animations and layouts
 - Real-world GitHub workflow
 - Pull request based development
+<<<<<<< HEAD
+=======
+- Professional branch management
+>>>>>>> dev
 
 ---
 
@@ -95,4 +138,10 @@ Shopperz-ecommerce/
 # Author
 ShoPperZ
 
+<<<<<<< HEAD
 Frontend e-commerce UI project built for portfolio and learning purposes.
+=======
+A Frontend e-commerce UI project built for learning, practice, and portfolio use.
+
+If you like this project feel free to star it and use it for learning.
+>>>>>>> dev
