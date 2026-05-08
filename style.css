@@ -3,6 +3,7 @@
     --accent: rgb(243, 168, 7);
     --dark: black;
     --light: white;
+    --danger: red;
 }
 
 * {
@@ -30,6 +31,49 @@ header {
 
 .logo a:hover {
     color: var(--primary);
+    transition-duration: 1s;
+}
+
+.menu {
+    visibility: hidden;
+}
+
+.menu.show {
+    visibility: visible;
+}
+
+ion-icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+ion-icon:hover {
+    cursor: pointer;
+}
+
+header a ion-icon {
+    position: relative;
+    right: 3px;
+}
+
+.search {
+    display: flex;
+    position: relative;
+}
+
+.search a {
+    display: flex;
+}
+
+#input {
+    width: 250px;
+    height: 32px;
+    border: none;
+    padding: 5px;
+    text-decoration: none;
 }
 
 .heading ul {
@@ -41,47 +85,44 @@ header {
 }
 
 .heading ul li a {
+    margin: 5px;
     text-decoration: none;
+    font-weight: 500;
+    position: relative;
     color: white;
-    margin: 0 14px;
+    margin: 2px 14px;
     font-size: 18px;
     transition: 0.5s;
 }
 
+.heading ul li a:active {
+    color: red;
+}
+
 .heading ul li a:hover {
     color: var(--primary);
-}
-
-.search {
-    display: flex;
-    align-items: center;
-}
-
-#input {
-    width: 250px;
-    height: 32px;
-    border: none;
-    padding: 5px;
-}
-
-ion-icon {
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    color: black;
-    cursor: pointer;
+    transition-duration: 1s;
 }
 
 .heading1 {
     opacity: 0;
 }
 
-.menu {
-    visibility: hidden;
+.heading ul li a::before {
+    content: '';
+    height: 2px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--accent);
+    transition-duration: 1s;
 }
 
-.menu.show {
-    visibility: visible;
+.heading ul li a:hover::before {
+    width: 100%;
+    transition-duration: 1s;
+    background-color: rgb(243, 168, 7);
 }
 
 /* HERO SLIDER */
@@ -185,12 +226,16 @@ ion-icon {
     color: white;
     height: 25px;
     padding-top: 4px;
+    margin: 0;
 }
 
 .section2 .container .items .price {
-    color: red;
+    color: var(--danger);
     font-weight: 700;
     padding-left: 10px;
+    float: left;
+    display: block;
+    width: 100%;
 }
 
 .section2 .container .items .info {
@@ -201,17 +246,21 @@ ion-icon {
 .section2 .container .items .img img {
     width: 200px;
     height: 200px;
+    margin: 0;
+    padding: 0;
     border-radius: 12px;
     transition-duration: 0.8s;
 }
 
 .section2 .container .items .img {
     overflow: hidden;
+    margin: 0;
 }
 
 .section2 .container .items:hover .img img {
     transform: scale(1.2);
     transition-duration: 0.8s;
+    border-radius: 12px;
 }
 
 footer {
